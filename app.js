@@ -1,11 +1,13 @@
 (function () {
 	'use strict';
 
-	// import {angular} from './angular';
-
 	angular.module('coursera-test', [])
 
-	.controller('NameCalculatorController',  function ($scope) {		//['', function(){}])
+	.controller('NameCalculatorController', ['$scope', nameCalculatorController])
+
+	.controller('DIController', ['$scope', '$filter', diController]);
+
+	function nameCalculatorController($scope) {
 		$scope.name = "";
 		$scope.totalValue = 0;
 
@@ -22,8 +24,17 @@
 			}
 			return totalStringValue;
 		}
+	}
 
-	});
+
+	function diController($scope, $filter){
+		$scope.diName = 'XPEHb';
+
+		$scope.upper = function () {
+			var upCase = $filter('uppercase');
+			$scope.diName = upCase($scope.diName);
+		}
+	}
 
 
 })();

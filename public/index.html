@@ -15,6 +15,15 @@
 				ng-keyup="displayNumeric();">
 		</div>
 		<div>Total numeric value of person's name is: {{totalValue}}</div>
+	</div>
+
+	<h1>DI in JS an AngularJS</h1>
+	<div ng-controller="DIController" id="target">
+
+		<input type="text"
+			ng-model="diName"
+			ng-blur="upper();">
+		<div>Just {{diName}}</div>
 
 	</div>
 	
