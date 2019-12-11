@@ -1,0 +1,13 @@
+{
+  "name": "ng-test",
+  "version": "1.0.0",
+  "description": "coursera ng p.1",
+  "main": "app.js",
+  "repository": "https://github.com/BredSoba4ij/coursera-test.git",
+  "author": "Alex M <bredsoba4ij@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-nodemon": "^2.4.2"
+  }
+}

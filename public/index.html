@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app='coursera-test'>
+<head>
+	<meta charset="UTF-8">
+	<title>coursera-test</title>
+</head>
+<body>
+	<h1 style="text-align:center; font-weight: bold;">Hello from COURSERA-TEST!</h1>
+
+	<div ng-controller="NameCalculatorController">
+		<div>
+			Your name: 
+			<input type="text"
+				ng-model="name"
+				ng-keyup="displayNumeric();">
+		</div>
+		<div>Total numeric value of person's name is: {{totalValue}}</div>
+
+	</div>
+	
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+	<script src="../app.js"></script>
+</body>
+</html>
