@@ -18,7 +18,7 @@
 	</div>
 
 	<h1>DI in JS an AngularJS</h1>
-	<div ng-controller="DIController" id="target">
+	<div ng-controller="DIController">
 
 		<input type="text"
 			ng-model="diName"
@@ -26,9 +26,19 @@
 		<div>Just {{diName}}</div>
 
 	</div>
+
+	<h1>Expressions and interpolations</h1>
+	<div ng-controller="MsgController"> {{yaName}} has a message for you: <br/> {{sayMessage()}} 
+		<div>
+			<button ng-click="feedDumbAss();">Feed DumbAss</button>
+			<br>
+			<img ng-src="./img/yaakov_{{stateOfBeing}}.png" width="150">
+		</div>
+	</div>
 	
 
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+	<!-- <script src="../angular.min.js"></script> -->
 	<script src="../app.js"></script>
 </body>
 </html>

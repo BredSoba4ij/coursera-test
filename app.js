@@ -3,11 +3,17 @@
 
 	angular.module('coursera-test', [])
 
-	.controller('NameCalculatorController', ['$scope', nameCalculatorController])
+	.controller('NameCalculatorController', NameCalculatorController)
 
-	.controller('DIController', ['$scope', '$filter', diController]);
+	.controller('DIController', DIController)
 
-	function nameCalculatorController($scope) {
+	.controller('MsgController', MsgController);
+
+	MsgController.$inject = ['$scope'];
+	NameCalculatorController.$inject = ['$scope'];
+	DIController.$inject = ['$scope', '$filter'];
+
+	function NameCalculatorController($scope) {
 		$scope.name = "";
 		$scope.totalValue = 0;
 
@@ -26,13 +32,24 @@
 		}
 	}
 
-
-	function diController($scope, $filter){
-		$scope.diName = 'XPEHb';
+	function DIController($scope, $filter){
+		$scope.diName = 'xpeHb';
 
 		$scope.upper = function () {
 			var upCase = $filter('uppercase');
 			$scope.diName = upCase($scope.diName);
+		}
+	}
+
+	function MsgController($scope) {
+		$scope.yaName = "DumbAss";
+		$scope.stateOfBeing = 'hungry';
+		$scope.sayMessage = function () {
+			return `${$scope.yaName} likes to eat healthy snacks at night!`;
+		}
+
+		$scope.feedDumbAss = function () {
+			$scope.stateOfBeing = $scope.stateOfBeing=="hungry" ? "fed" : "hungry";
 		}
 	}
 
